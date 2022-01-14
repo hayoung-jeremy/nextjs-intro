@@ -8,26 +8,29 @@ const NavBar = () => {
   return (
     <nav>
       <Link href="/">
-        {/* using `` , ${} */}
-        <a
-          className={`${styles.default} ${
-            router.pathname === "/" ? styles.active : ""
-          }`}
-        >
-          Home
-        </a>
+        <a className={router.pathname === "/" ? "active" : ""}>Home</a>
       </Link>
       <Link href="/about">
-        {/* using [] , join(" ") */}
-        <a
-          className={[
-            styles.default,
-            router.pathname === "/about" ? styles.active : "",
-          ].join(" ")}
-        >
-          About
-        </a>
+        <a className={router.pathname === "/about" ? "active" : ""}>About</a>
       </Link>
+      <style jsx>{`
+        nav {
+          display: flex;
+          gap: 8px;
+          background-color: #eee;
+          padding: 16px;
+          border-radius: 8px;
+        }
+        a {
+          text-decoration: none;
+          color: #888;
+          font-family: Montserrat;
+        }
+        .active {
+          color: #444;
+          font-weight: 500;
+        }
+      `}</style>
     </nav>
   );
 };
