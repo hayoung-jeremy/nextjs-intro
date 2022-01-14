@@ -1,0 +1,7 @@
+.default {
+  text-decoration: none;
+}
+.active {
+  text-decoration: dashed;
+  color: palevioletred;
+}
