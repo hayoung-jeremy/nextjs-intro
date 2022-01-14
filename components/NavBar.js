@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import styles from "./NavBar.module.css";
 
 const NavBar = () => {
   const router = useRouter();
@@ -24,7 +23,6 @@ const NavBar = () => {
         a {
           text-decoration: none;
           color: #888;
-          font-family: Montserrat;
         }
         .active {
           color: #444;
