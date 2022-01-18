@@ -6,23 +6,35 @@ const NavBar = () => {
   console.log(router);
   return (
     <nav>
-      <Link href="/">
-        <a className={router.pathname === "/" ? "active" : ""}>Home</a>
-      </Link>
-      <Link href="/about">
-        <a className={router.pathname === "/about" ? "active" : ""}>About</a>
-      </Link>
+      <img src="/vercel.svg" alt="versel.svg" />
+      <div>
+        <Link href="/">
+          <a className={router.pathname === "/" ? "active" : ""}>Home</a>
+        </Link>
+        <Link href="/about">
+          <a className={router.pathname === "/about" ? "active" : ""}>About</a>
+        </Link>
+      </div>
       <style jsx>{`
         nav {
           display: flex;
-          gap: 8px;
-          background-color: #eee;
-          padding: 16px;
-          border-radius: 8px;
+          flex-direction: column;
+          align-items: center;
+          gap: 12px;
+          padding: 20px 0;
+          box-shadow: rgba(50, 50, 93, 0.05) 0px 50px 80px -40px,
+            rgba(0, 0, 0, 0.15) 0px 30px 60px -26px;
         }
-        a {
-          text-decoration: none;
-          color: #888;
+        nav > div {
+          display: flex;
+          gap: 12px;
+        }
+        nav a {
+          font-size: 18px;
+        }
+        img {
+          max-width: 100px;
+          margin-bottom: 8px;
         }
         .active {
           color: #444;
